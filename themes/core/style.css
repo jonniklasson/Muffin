@@ -1,0 +1,25 @@
+/* 
+    Document   : style
+    Created on : 2013-maj-06, 20:53:31
+    Author     : Jonathan
+    Description:
+        Core theme for Muffin
+*/
+
+/**
+* Structure
+*/
+html{}
+body{
+   background-color:#eee;
+   font: 1em Verdana, Arial, Helvetica, sans-serif;
+}
+
+#header,
+#main,
+#footer {
+   margin:0 auto;
+   width:970px;
+   background-color:#fff;
+   padding: 1em;
+}
