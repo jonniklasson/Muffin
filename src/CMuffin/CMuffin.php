@@ -38,7 +38,6 @@ class CMuffin implements ISingleton {
         // Take current url and divide it in controller, method and parameters
         $this->request = new CRequest();
         $this->request->Init($this->config['base_url']);
-        $this->request->Init();
         $controller = $this->request->controller;
         $method = $this->request->method;
         $arguments = $this->request->arguments;
