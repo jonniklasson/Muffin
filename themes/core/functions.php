@@ -1,33 +1,33 @@
 <?php
 /**
-* Helpers for the template file.
-*/
-$mu->data['header'] = '<h1>Header: Muffin</h1>';
-$mu->data['main']   = '<p>Main: Now with a theme engine, Not much more to report for now.</p>';
-$mu->data['footer'] = '<p>Footer: &copy; Muffin by Jonathan Niklasson </p>';
-
+ * Helpers for the template file.
+ */
 
 /**
-* Print debuginformation from the framework.
-*/
-function get_debug() {
-  $mu = CMuffin::Instance();
-  $html = "<h2>Debuginformation</h2><hr><p>The content of the config array:</p><pre>" . htmlentities(print_r($mu->config, true)) . "</pre>";
-  $html .= "<hr><p>The content of the data array:</p><pre>" . htmlentities(print_r($mu->data, true)) . "</pre>";
-  $html .= "<hr><p>The content of the request array:</p><pre>" . htmlentities(print_r($mu->request, true)) . "</pre>";
-  return $html;
-}
+ * Add static entries in the template file. 
+ */
+$mu->data['header'] = '<h1>Muffin</h1>';
 
-/**
-* Helpers for theming, available for all themes in their template files and functions.php.
-* This file is included right before the themes own functions.php
-*/
+$mu->data['footer'] = <<<EOD
+<p>Footer: &copy; Muffin by Jonathan</p>
 
-/**
-* Create a url by prepending the base_url.
-*/
-function base_url($url) {
-  return CMuffin::Instance()->request->base_url . trim($url, '/');
-}
+<p>Tools: 
+<a href="http://validator.w3.org/check/referer">HTML5</a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+<a href="http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance">Unicorn</a>
+<a href="http://validator.w3.org/i18n-checker/check?uri=<?php echo getCurrentUrl(); ?>">i18n</a>
+<a href="http://validator.w3.org/checklink?uri=<?php echo getCurrentUrl(); ?>">Links</a>
+</p>
+
+<p>Docs:
+<a href="http://www.w3.org/2009/cheatsheet/">Cheetsheet</a>
+<a href="http://dev.w3.org/html5/spec/">HTML5</a> 
+<a href="http://www.w3.org/TR/CSS2/">CSS2</a> 
+<a href="http://www.w3.org/Style/CSS/current-work#CSS3">CSS3</a>
+<a href="http://php.net/manual/en/index.php">PHP</a> 
+</p>
+
+EOD;
+
 
 ?>

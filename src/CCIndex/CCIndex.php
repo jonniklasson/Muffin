@@ -15,6 +15,9 @@ class CCIndex implements IController {
     public function Index() {
         global $mu;
         $mu->data['title'] = "The Index Controller";
+		$mu->data['main'] = "<h1>The Index Controller</h1>";
+		$mu->data['favicon'] = $mu->request->base_url . '/img/muffin.ico'; 
+		$mu->data['top_image']= $mu->request->base_url .'/img/muffin.png';
     }
 
 }

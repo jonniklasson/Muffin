@@ -90,6 +90,7 @@ class CMuffin implements ISingleton {
 
         // Include the global functions.php and the functions.php that are part of the theme
         $mu = &$this;
+		include(MUFFIN_INSTALL_PATH . '/themes/functions.php');
         $functionsPath = "{$themePath}/functions.php";
         if (is_file($functionsPath)) {
             include $functionsPath;

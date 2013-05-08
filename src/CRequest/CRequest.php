@@ -52,7 +52,8 @@ class CRequest {
         $controller = !empty($splits[0]) ? $splits[0] : 'index';
         $method = !empty($splits[1]) ? $splits[1] : 'index';
         $arguments = $splits;
-        unset($arguments[0], $arguments[1]); // remove controller & method part from argument list
+        unset($arguments[0], $arguments[1]); 
+		// remove controller & method part from argument list
         // Prepare to create current_url and base_url
         $currentUrl = $this->GetCurrentUrl();
         $parts = parse_url($currentUrl);

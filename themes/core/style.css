@@ -15,11 +15,30 @@ body{
    font: 1em Verdana, Arial, Helvetica, sans-serif;
 }
 
+/**
+*	Colors
+*
+*/
+#header {
+background-color:#57C539;}
+#main {
+background-color: #A5C33B;}
+#footer {
+background-color: #C0933E;}
+
+
+#header {
+	text-align: center;
+}
+#header img {
+	margin: 0 auto;
+}
+
+
 #header,
 #main,
 #footer {
    margin:0 auto;
    width:970px;
-   background-color:#fff;
    padding: 1em;
 }
